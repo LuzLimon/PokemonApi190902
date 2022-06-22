@@ -33,30 +33,6 @@ const Main=()=>{
     useEffect(()=>{
         pokeFun();
     },[url])
-    return(
-        <>
-            <div className="container">
-                <div className="left-content">
-                    <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
-                    
-                    <div className="btn-group">
-                        { prevUrl && <button onClick={()=>{
-                            setPokeData([])
-                           setUrl(prevUrl) 
-                        }}>Pagina Anterior</button>}
-
-                        { nextUrl && <button onClick={()=>{
-                            setPokeData([])
-                            setUrl(nextUrl)
-                        }}>Pagina Siguiente</button>}
-
-                    </div>
-                </div>
-                <div className="right-content">
-                   <Pokeinfo data={pokeDex}/>
-                </div>
-            </div>
-        </>
-    )
+    
 }
 export default Main;
